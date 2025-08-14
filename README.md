@@ -1,2 +1,2 @@
 # React_practice
-# This project is to 
+# This project is to learn 
