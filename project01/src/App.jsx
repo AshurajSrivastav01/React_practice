@@ -1,13 +1,13 @@
-import './App.css'
-import kgButton from './components/kgButton'
+import './App.css';
+import KgButton from './components/KgButton'
 
 function App() {
   return (
     <>
       <h1>Home Page</h1>
-      <kgButton></kgButton>
+      <KgButton></KgButton>
     </>
   )
 }
 
-export default App
+export default App;

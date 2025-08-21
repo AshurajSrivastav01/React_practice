@@ -1,4 +1,4 @@
-function kgButton(){
+function KgButton(){
     return <button>Click Me</button>
 }
-export default kgButton
+export default KgButton
