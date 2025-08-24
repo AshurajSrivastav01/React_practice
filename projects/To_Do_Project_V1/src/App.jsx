@@ -1,47 +1,18 @@
 import './App.css'
-
+import AddToDo from './components/AddToDo'
+import AppName from "./components/AppName"
+import TodoItem1 from './components/TodoItem1'
+import TodoItem2 from './components/TodoItem2'
 function App() {
   return (
     <>
       <div classNameName='todo-container'>
-        <h1 className='text-center my-5'>TO DO List</h1>
-        
-        <div className="row">
-          <div className="col-md-6">
-            <input type="text" className="form-control" name="name" id="name" placeholder="Enter Task..." />
-          </div>
-          <div className="col-md-4">
-            <input type="date" className="form-control" name="date" id="date" />
-          </div>
-          <div className="col-md-2">
-            <button type="button" className="btn btn-success">Success</button>
-          </div>
-        </div>
+        <AppName></AppName>
+        <AddToDo></AddToDo>
 
         {/* List Area Starts */}
-        <div className="row">
-          <div className="col-md-6">
-            <p>To Do List UI</p>
-          </div>
-          <div className="col-md-4">
-            <p>08/23/2025</p>
-          </div>
-          <div className="col-md-2">
-            <button type="button" className="btn btn-danger">Delete</button>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-6">
-            <p>To Do List Logic Functionlity</p>
-          </div>
-          <div className="col-md-4">
-            <p>08/24/2025</p>
-          </div>
-          <div className="col-md-2">
-            <button type="button" className="btn btn-danger">Delete</button>
-          </div>
-        </div>
+        <TodoItem1></TodoItem1>
+        <TodoItem2></TodoItem2>
       </div>
     </>
   )
