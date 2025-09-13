@@ -1,0 +1,9 @@
+.calculator{
+  width: 225px;
+  border-width: 1px;
+  border-style: inset;
+  border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  padding: 20px;
+  margin: 50px;
+  border-radius: 12px;
+}

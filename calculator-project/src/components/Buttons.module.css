@@ -1,0 +1,14 @@
+.button-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.button{
+  width: 45px;
+  height: 45px;
+  border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-width: 1px;
+  border-radius: 6px;
+}
