@@ -3,21 +3,29 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Fooditems from './components/Fooditems'
 import Container from './components/Container';
 import FoodInputs from './components/FoodInputs';
+import { useState } from 'react';
 function App() {
-  let foodItems = ['Dal', 'Green Vegetable', 'Roti', 'Salad', 'Milk', 'Ghee'];
+  // 1st Basic Way to Use '' useState' hook
+  /* let textStateArr = useState("Food Item Enter by User!");
+  let textToShow = textStateArr[0];
+  let setTextToShow = textStateArr[1]; */
 
-  let textToShow = "Food Item Enter by User!";
+  // 2nd One line code 'Advance and easy way to do'
+  let [textToShow, setTextToShow] = useState("Food Item Enter by User!");
+  let [foodItems, setFoodItems] = useState(['Dal', 'Green Vegetable', 'Roti']);
 
-  const handleOnChange = (event) => {
-    console.log(event.target.value)
-    textToShow = event.target.value;
+  const handleOnKeyDown = (event) => {
+    if(event.key === 'Enter'){
+      console.log(event.target.value)
+      setTextToShow(event.target.value);
+    }
   };
 
   return (
     <Container>
       <h1>Food Items:</h1>
-      <FoodInputs handleOnChange={handleOnChange}></FoodInputs>
-      <p>{textToShow}</p>
+      <FoodInputs handleOnKeyDown={handleOnKeyDown}></FoodInputs>
+      {/* <p>{textToShow}</p> */}
       <Fooditems items={foodItems}></Fooditems>
     </Container>
   )
