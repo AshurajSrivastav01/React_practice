@@ -16,8 +16,12 @@ function App() {
 
   const handleOnKeyDown = (event) => {
     if(event.key === 'Enter'){
-      console.log(event.target.value)
-      setTextToShow(event.target.value);
+      console.log(event.target.value);
+      let newFoodItem = event.target.value;
+      let newItem = [...foodItems, newFoodItem];
+      // setTextToShow(event.target.value);
+      setFoodItems(newItem);
+      event.target.value = "";  
     }
   };
 
