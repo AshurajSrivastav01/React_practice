@@ -9,7 +9,7 @@ const Item = (props) =>{
     return (
         <li className={`list-group-item ${props.bougth ? 'active' : ''}`}>
             {props.foodItem}
-            <button className={`${Styles.button} btn btn-info`} onClick={props.buyButton}>Click  Me</button>
+            <button className={`${Styles.button} btn ${props.bougth ? 'btn-secondary' : 'btn-info'}`} onClick={props.buyButton}>{props.bougth ? 'Remove' : 'Buy'}</button>
         </li>
     )
 }

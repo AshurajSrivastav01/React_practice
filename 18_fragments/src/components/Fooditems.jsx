@@ -4,9 +4,16 @@ import Item from "./Item";
 const Fooditems = (props) =>{
     
     let [activeItem, setActiveItem] = useState([]);
-
+    let newItem;
     let onBuyButton = (item, event) => {
-        let newItem = [...activeItem, item];
+        if(activeItem.includes(item)){
+            // if the item is already present in the arrary 'activeItem' then remove
+            newItem = activeItem.filter(removeItem => removeItem !== item);
+            console.log(newItem);
+            setActiveItem(newItem);
+            return;
+        }
+        newItem = [...activeItem, item];
         setActiveItem(newItem);
     };
 
