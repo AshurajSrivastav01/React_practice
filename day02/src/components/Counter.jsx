@@ -7,7 +7,7 @@ export const Counter = () => {
         updateCounter(counter+1);
     }
 
-    return (
+    return ( 
         <>
             <h1>Counter: {counter}</h1>
             <button onClick={handleCount}>Update Counter</button>
