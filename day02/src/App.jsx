@@ -1,5 +1,6 @@
 import {useState} from "react";
 import { Counter } from './components/Counter';
+import { Toggle } from './components/Toggle';
 
 function App() {
   const [fruit, setFruit] = useState("Apple");
@@ -13,6 +14,9 @@ function App() {
         <h1>{fruit}</h1>
         <button onClick={handle}>Change Fruit</button>
         <Counter />
+        <br></br>
+        <span>------------------------------------------------------</span>
+        <Toggle />
       </div>
     </>
   )
