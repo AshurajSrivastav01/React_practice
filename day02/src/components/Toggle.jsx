@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {User} from './User';
 
 export function Toggle(){
     const [displayName, setDisplayName] = useState(true);
@@ -10,7 +11,7 @@ export function Toggle(){
     return(
         <>
             <h1>Toggle Name using 'useState'</h1>
-            <h2>User Name: {displayName ? 'Ashuraj Srivastav' : 'No Name' }</h2>
+            <h2>User Name: {displayName ? <User /> : 'No Name' }</h2>
             <button type="button" onClick={toggleName}>Change Name</button>
         </>
     );
