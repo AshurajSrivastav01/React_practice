@@ -23,7 +23,7 @@ function App() {
             <input type="text" value={name} onChange={(event)=> setName(event.target.value) } placeholder="Enter Name" /><br />
             <input type="text" value={email} onChange={(event)=> setEmail(event.target.value) } placeholder="Enter Email" /><br />
             <input type="password" value={password} onChange={(event)=> setPassword(event.target.value) } placeholder="Enter Password" /> <br />
-            <button type="submit">Submit</button> &nbsp <button onClick={clearFileds} type="button">Clear</button>
+            <button type="submit">Submit</button> &nbsp <button type="button" onClick={clearFileds}>Clear</button>
           </form>
         </div>
         <div className="output">
