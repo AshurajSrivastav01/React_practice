@@ -1,7 +1,7 @@
 export function User({data}){
     return(
         <>
-            <div style={{
+            <div key={data.id} id={data.id} style={{
                 width: "200px",
                 display: "flex",
                 flexDirection: "column",

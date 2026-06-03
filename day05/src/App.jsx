@@ -41,13 +41,13 @@ function App() {
       <Table students={students}/>
       <br/>
       <h2>Resue Component in Loop</h2>
+      <div style={{ display: "flex", gap: "10px" }}>
       {
         students.map((data)=>(
-          <div key={data.id} style={{ display: "flex", gap: "10px" }}>
-            <User data={data} />
-          </div>
+          <User data={data} />
         ))
       }
+      </div>
     </>
   )
 }
