@@ -8,12 +8,16 @@ function App() {
 
   const addTask = (newTask) => {
     setTask([...task, newTask]);
-    // alert(newTask);
   }
   return (
     <>
       <h1>To-Do Application Version 1.0</h1>
-      <div>
+      <div style={{
+            width: "fit-content",
+            border: "1px solid #fff",
+            padding: "11px",
+            borderRadius: "7px"
+      }}>
         <SetTask addTask={addTask}/>
         {
           task.map((t, index)=>(
@@ -25,4 +29,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
