@@ -14,7 +14,16 @@ const SetTask = ({addTask})=>{
                 flexWrap: "wrap" 
             }} 
         >
-            <input type="text" value={input} onChange={(e)=>setInput(e.target.value)} name="task" id="task" placeholder="Enter you task"/>
+            <input type="text" 
+                value={input} 
+                onChange={(e)=>setInput(e.target.value)} 
+                name="task" id="task" 
+                placeholder="Enter you task"
+                style={{
+                    fontSize: "17px",
+                    padding: "4px 11px"
+                }}
+            />
             <button type="button" onClick={handlingAddTask}>Add Task</button>
         </div>
     );
