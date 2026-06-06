@@ -1,12 +1,10 @@
 import { useState } from 'react';
-const SetTask = ()=>{
+const SetTask = ({addTask})=>{
 
-    const [task, setTask] = useState([]);
     const [input, setInput] = useState("");
 
-    const addTask = (event) => {
-
-        setTask([...task, input]);
+    const handlingAddTask = (event) => {
+        addTask(input);
     };
     return (
         <div style={{ 
@@ -18,10 +16,7 @@ const SetTask = ()=>{
             }} 
         >
             <input type="text" value={input} onChange={(e)=>setInput(e.target.value)} name="task" id="task" placeholder="Enter you task"/>
-            <button type="button" onClick={addTask}>Add Task</button>
-
-            <br></br>
-            <p>Task: {task}</p>
+            <button type="button" onClick={handlingAddTask}>Add Task</button>
         </div>
     );
 };

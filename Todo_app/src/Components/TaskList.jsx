@@ -1,7 +1,7 @@
-const TaskList = () => {
+const TaskList = ({key, task}) => {
     return (
         <>
-            
+            <div key={key}>{task}</div>
         </>
     );
 }
