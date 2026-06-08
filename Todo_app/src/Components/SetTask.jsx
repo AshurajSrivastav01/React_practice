@@ -5,6 +5,7 @@ const SetTask = ({addTask})=>{
 
     const handlingAddTask = (event) => {
         addTask(input);
+        setInput("");
     };
     return (
         <div style={{ 

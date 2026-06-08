@@ -7,11 +7,22 @@ function App() {
   const [task, setTask] = useState([]);
 
   const addTask = (newTask) => {
-    setTask([...task, newTask]);
+    if(!task.includes(newTask)){
+      setTask([...task, newTask]);
+    }else{
+      alert("Task Already Exist. You can not add the same task twic!");
+    }
+  }
+
+  const removeTask = (removetaskValue) => {
+    if(task.includes(removetaskValue)){
+      // Remove element
+      setTask(task.filter(t => t !== removetaskValue));
+    }
   }
   return (
     <>
-      <h1>To-Do Application Version 1.0</h1>
+      <h1 style={{ margin: "4rem 0" }}>To-Do Application Version 1.0</h1>
       <div style={{
             width: "fit-content",
             border: "1px solid #fff",
@@ -21,7 +32,7 @@ function App() {
         <SetTask addTask={addTask}/>
         {
           task.map((t, index)=>(
-            <TaskList key={index} task={t}/>
+            <TaskList key={index} task={t} removeTask={removeTask} />
           ))
         }
       </div>

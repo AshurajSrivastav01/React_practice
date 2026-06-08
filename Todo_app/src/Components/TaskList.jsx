@@ -1,11 +1,8 @@
-const TaskList = ({key, task}) => {
-    const handleRemoveTask = () => {
-
-    }
-    
+const TaskList = ({task, removeTask}) => {
+        
     return (
         <>
-            <div key={key} style={{
+            <div style={{
                     border: "1px solid rgb(255, 255, 255)",
                     margin: "5px 0px",
                     borderRadius: "4px",
@@ -21,7 +18,7 @@ const TaskList = ({key, task}) => {
                     style={{
                         cursor: "pointer"
                     }} 
-                    onClick={handleRemoveTask}
+                    onClick={()=>removeTask(task)}
                 >
                     X
                 </span>
